@@ -28,5 +28,18 @@ function removeDuplicates(arr) {
     }
     return arr;
 }
-const arr = [2, 3, 3, 3, 6, 9, 9];
-console.log(removeDuplicates(arr))
+const arr = [2, 2,3, 3, 3, 6, 9, 9];
+console.log(rr(arr))
+
+
+
+ function rr (nums) {
+    let i=0, j=1;
+    while( j<nums.length){
+        if(nums[i] == nums[j]){
+            nums.splice(i,1)
+        }
+        i++;
+        j++;
+    }return nums;
+};

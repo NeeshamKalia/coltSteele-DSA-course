@@ -9,3 +9,4 @@ function capitalize(arr) {
 }
 
 console.log(capitalize(["abc", "pwf", "thid"]))
+
