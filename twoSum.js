@@ -14,18 +14,16 @@ let  twoSum = function(nums, target) {
 };
 
 var twoSumm = function(nums, target) {
-    const res = []
-    let freq = new Map();
-    for(let i=0; i<nums.length; i++){
-        if(freq.get(target - nums[i]) == undefined){
-            freq.set(nums[i],i)
+    let freq = new Map()
+    for(let i =0; i<nums.length; i++){
+        if(freq.has(target - nums[i])){
+            return [freq.get(target - nums[i]), i]
         }
         else {
-            res.push(i,freq.get(nums[target - nums[i]]))
-
-                    }
-    }return res;
+            freq.set(nums[i],i)
+        }
+    }
 };
 
 
-console.log(twoSum vvv v        ([1,2,3,4,5],8))
+console.log(twoSumm([11,2,-3,4,1,5],9))
