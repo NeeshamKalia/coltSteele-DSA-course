@@ -12,6 +12,7 @@ var isPalindrome = function(s) {
 };
 
 
+//leetcode a man, a plan, a canal: Panama
 
 var isPalindrom = function(s) {
     s = s.toLowerCase(), b = ""
