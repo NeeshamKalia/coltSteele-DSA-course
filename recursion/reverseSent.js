@@ -10,8 +10,11 @@ function revere(sent) {
     return result.concat(revere(arr.slice(1)))
 
 }
-console.log(revere("Hi this is a lot of work"))
+console.log(reverse("Hi this is a lot of work"))
+
+
  function reverse(str) {
+    str = str.split(' ')
     if (str.length === 0) return ""
     return (str.slice(1) + str[0])
  }

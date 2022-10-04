@@ -3,3 +3,4 @@ function pow(m,n){
     else return (pow(m,n-1)* m)
 }
 console.log(pow(2,1))
+

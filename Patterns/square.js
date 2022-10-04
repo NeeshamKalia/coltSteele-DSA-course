@@ -1,12 +1,18 @@
-//print a rectangle pattern using * with taking an input n
+//print  patterns using * with taking an input n
 
-function square(symbol,n) {
+function square(n) {
+    symbol = ""
     for(let i =1; i<=n; i++){
-        symbol = "*"
-        for(j =1; j<=n; j++){
-            symbol += symbol
+
+        for(j =1; j<=n ; j++){
+            symbol += "*"
         }
-        console.log(symbol)
+        symbol += "\n"
+}return symbol;
 }
+
+console.log(square(4))
+
+function  incBlock (n){
+    
 }
-console.log(square("*",4))
