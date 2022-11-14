@@ -28,9 +28,10 @@ function combinations  (candidates, target,i=0, ds= []) {
 
 
 
-function combinationSum (candidates,target, i=0, ds=[], ans = []){
+function combinationSum (candidates,target,ans, i=0, ds = []){
     if(i>= candidates.length){
         if(target ==0){
+            console.log(ds)
             ans.push(ds)
         }
            // console.log(ans)
@@ -40,13 +41,15 @@ function combinationSum (candidates,target, i=0, ds=[], ans = []){
     }
     if(candidates[i] <= target){
         ds.push(candidates[i])
-        combinationSum(candidates, target- candidates[i], i, ds, ans)
+        combinationSum(candidates, target- candidates[i],ans, i, ds)
         ds.pop()
     }
-    combinationSum(candidates, target, i+1, ds, ans)
-    
+    combinationSum(candidates, target, ans,i+1, ds)
+    return ans;
+
 }
 
 let candidates = [2,3,6,7]
 let target = 7
-console.log(combinationSum(candidates,target))
+let ans = []
+console.log(combinationSum(candidates,target,ans))
